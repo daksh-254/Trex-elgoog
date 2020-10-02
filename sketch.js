@@ -33,7 +33,7 @@ function setup() {
   
   ground = createSprite(200, 180, 400, 20);
   ground.addImage(ground_image);
-  ground.velocityX = -3;
+  ground.velocityX = -5;
   ground.x = ground.width/2;
   
   invisible_ground = createSprite(200, 195, 800, 20);
@@ -73,7 +73,7 @@ function draw() {
     
      
       //.to add gravity
-      trex.velocityY = trex.velocityY + 0.5;
+      trex.velocityY = trex.velocityY + 0.6;
     
       //spawning cloud and obstacle
       spawnClouds();
@@ -125,7 +125,7 @@ function spawnClouds() {
     cloud.y = Math.round(random(80,140));
     cloud.addImage(cloud_image);
     cloud.scale = 0.5;
-    cloud.velocityX = -3;
+    cloud.velocityX = -5;
     
     //assign lifetime to the variable
     cloud.lifetime = 220;
@@ -140,7 +140,7 @@ function spawnClouds() {
 function spawnObstacles() {
   if(frameCount % 100 === 0) {
     var obstacle = createSprite(600,165,10,40);
-    obstacle.velocityX = -3;
+    obstacle.velocityX = -5;
     
     //generate random obstacles
     var rand = Math.round(random(1,6));
